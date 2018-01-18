@@ -1,8 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-/* more headers goes there */
-
+/**
+ * main - entry block
+ * @void: no argument
+ * Return: 0 (Sucess)
+ **/
 int main(void)
 {
 	int n;
