@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
+ * main - print alphabet does this
  *
  * Return: Always 0.
  */
