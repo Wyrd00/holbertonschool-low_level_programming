@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * int _islower - check that all is lower character
+ *_islower - check that all is lower character
  */
 int _islower(int c)
 {
