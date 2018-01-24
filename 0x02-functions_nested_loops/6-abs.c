@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * int_abs - calculate absoulte value w/o abs function
+ * _abs - calculate absoulte value w/o abs function
  * @x: an int
  * Return: x if positive, x*-1 if x was negative
  */
