@@ -2,8 +2,8 @@
 
 /**
  * jack_bauer - print military time
- * @void
- * Return: Always 0.
+ * @void: declared integers
+ * Return: all int in military time
  */
 void jack_bauer(void)
 {
