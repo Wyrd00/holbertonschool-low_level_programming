@@ -2,10 +2,8 @@
 
 /**
  * times_table - print multiplication table using _putchar
- * @x: outer int
- * @y: inner int
- * @z: product
- * Return: multiplication table
+ * @void: ints
+ * Return: multiplication number
  */
 void times_table(void)
 {
