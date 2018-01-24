@@ -2,7 +2,9 @@
 
 /**
  * int add - add two ints together
- * @c: print two integers
+ * @a: first int
+ * @b: second int
+ * @c: third int
  * Return: c
  */
 int add(int a, int b)
