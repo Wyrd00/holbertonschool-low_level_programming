@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * void print_most_numbers - print num from 0 - 9, with exception to 2 and 4
+ * print_most_numbers - print num from 0 - 9, with exception to 2 and 4
  * @void: int declared below
  * Return: numbers w/o 2 & 4
  */

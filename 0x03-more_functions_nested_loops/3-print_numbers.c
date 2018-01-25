@@ -1,11 +1,10 @@
 #include "holberton.h"
 
 /**
- * void print_numbers - print num from 0 - 9
+ * print_numbers - print num from 0 - 9
  * @void: int declared below
  * Return: 0-9
  */
-
 void print_numbers(void)
 {
 	char n;
