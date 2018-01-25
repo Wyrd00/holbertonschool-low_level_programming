@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - Identify all capital alphabets
+ * _isupper - Identify all capital alphabets
  * @c: int
  * Return: 1 if capital alphabet, 0 if otherwise
  */

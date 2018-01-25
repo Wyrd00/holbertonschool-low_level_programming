@@ -1,1 +1,1 @@
-This project is for deepening my understanding in nested loops
+This project is for deepening my understanding of nested loops
