@@ -1,10 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - print int, but multiples of three will print 'Fizz'/
- * while mulitples of five will print 'Buzz'.
- * Multiples of both will print "FizzBuzz".
- * @n: int
+ * main - print int, but multiples of three - fizz, mult of five - buzz
+ * @void: int declared below
  * Return: int, fizz, buzz, fizzbuzz
  */
 int main(void)
