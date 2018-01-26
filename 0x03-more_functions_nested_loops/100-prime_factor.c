@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - entry block
- * @void: no argument
- * Return: 0
+ * max_prime_factor - calculate largest prime factor
+ * @n: long int
+ * Return: largest prime number
  */
 
 long max_prime_factor(long n)
@@ -11,7 +11,7 @@ long max_prime_factor(long n)
 	unsigned long max_prime;
 	int i;
 
-	for (i = 3; i <= n; i += 2)
+	for (i = 2; i <= n; i++)
 	{
 		while (n % i == 0)
 		{
@@ -19,13 +19,14 @@ long max_prime_factor(long n)
 			n = n / i;
 		}
 	}
-
-	if (n > 2)
-		max_prime = n;
-
 	return (max_prime);
 }
 
+/**
+ * main - entry block
+ * @void: no argument
+ * Return: 0
+ */
 int main(void)
 {
 	long n = 612852475143;
