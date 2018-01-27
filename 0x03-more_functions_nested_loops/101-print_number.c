@@ -6,8 +6,8 @@
  */
 void print_number(int n)
 {
-	int u = n;
-	int un;
+	unsigned int u = n;
+	unsigned int un;
 	unsigned int multiplier;
 	int counter1;
 	int counter2;
@@ -21,7 +21,7 @@ void print_number(int n)
 	{
 		_putchar(n + '0');
 	}
-	if (u >= 0)
+	if (u > 0)
 	{
 		un = u;
 		for (counter1 = 0; u > 0; counter1++)
