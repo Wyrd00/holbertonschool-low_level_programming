@@ -2,7 +2,7 @@
 /**
  * print_number - print stated integers
  * @n: int
- * Return: integers
+ * Return: integer
  */
 void print_number(int n)
 {
