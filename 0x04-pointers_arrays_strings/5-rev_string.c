@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * int rev_string - reverse string
- * @*s: pointer of int s
+ * @s: pointer of int s
  * Result: return reverse string
  */
 void rev_string(char *s)
