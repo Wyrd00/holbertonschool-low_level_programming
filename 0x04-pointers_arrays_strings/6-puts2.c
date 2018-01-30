@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * puts2 - print the first char of two
- * @s: pointer of int string
+ * @str: pointer of int string
  */
 
 void puts2(char *str)
