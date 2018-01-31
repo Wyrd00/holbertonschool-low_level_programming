@@ -2,7 +2,7 @@
 /**
  * _strlen - returns length of string
  * @s: pointer of int string
- * Result: return length
+ * Return: length
  */
 
 int _strlen(char *s)
