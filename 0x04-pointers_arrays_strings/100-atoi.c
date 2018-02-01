@@ -10,7 +10,7 @@ int _atoi(char *s)
 	unsigned int new_value = 0;
 	int num_count = 0;
 	int i;
-	int mult = 1;
+	unsigned int mult = 1;
 	int sign = 1;
 
 	for (i = 0; ((s[i] < '0') || (s[i] > '9')); i++)
