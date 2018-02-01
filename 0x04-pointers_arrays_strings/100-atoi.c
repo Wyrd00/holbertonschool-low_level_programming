@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * atoi - convert string to an integer
+ * _atoi - convert string to an integer
  * @s: string
  * Return: int
  */
 int _atoi(char *s)
 {
-	int new_value = 0;
+	unsigned int new_value = 0;
 	int num_count = 0;
 	int i;
 	int mult = 1;
@@ -23,10 +23,9 @@ int _atoi(char *s)
 		num_count++;
 		i++;
 	}
-	i -= 1;
 	while (num_count > 0)
 	{
-		new_value += ((s[i] - 48) * mult);
+		new_value += ((s[i - 1] - 48) * mult);
 		mult *= 10;
 		num_count--;
 		i--;
