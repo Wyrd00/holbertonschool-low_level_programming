@@ -11,14 +11,17 @@ char *rot13(char *s)
 	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i = 0;
-	int rot13_count;
+	int count;
 
 	while (s[i] != '\0')
 	{
-		for (rot13_count = 0; alpha[rot13_count] != '\0'; rot13_count++)
+		for (count = 0; alpha[count] != '\0'; count++)
 		{
-			if (s[i] == alpha[rot13_count])
-				s[i] = rot13[rot13_count];
+			if (s[i] == alpha[count])
+			{
+				s[i] = rot13[count];
+				break;
+			}
 		}
 		i++;
 	}
