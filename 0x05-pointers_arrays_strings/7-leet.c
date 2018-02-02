@@ -3,7 +3,7 @@
  * *leet - replace vowels with respective numerals
  * @s: character
  *
- * Result: leet speak
+ * Return: leet speak
  */
 char *leet(char *s)
 {
