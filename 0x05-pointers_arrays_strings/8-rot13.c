@@ -3,7 +3,7 @@
  * *rot13 - encode string using rot13
  * @s: pointer to character
  *
- * Result: rot13 speak
+ * Return: rot13 speak
  */
 
 char *rot13(char *s)
