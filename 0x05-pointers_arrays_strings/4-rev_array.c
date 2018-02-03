@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * rev_array - print string in reverse
+ * reverse_array - print string in reverse
  * @a: pointer to string
  * @n: integer
  *
@@ -8,14 +8,16 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
-	int c = 0;
-	int end = n - 1;
+	int i = 0;
+	int temp;
 
-	for (i = 0; i < n; i++)
+	n = n - 1;
+	while (i <= n)
 	{
-		c = a[i];
-		a[i] = a[end];
-		a[end] = c;
+		temp = a[i];
+		a[i] = a[n];
+		a[n] = temp;
+		i++;
+		n--;
 	}
 }
