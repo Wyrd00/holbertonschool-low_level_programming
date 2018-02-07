@@ -1,5 +1,11 @@
 #include "holberton.h"
-
+/**
+ * *_strstr - find needle in a haystack
+ * @haystack - string of character for needle to be compared to
+ * @needle - string to compare to haystack
+ *
+ * Return: haystack
+ */
 char *_strstr(char *haystack, char *needle)
 {
 	char *hayHold = haystack;
@@ -22,8 +28,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 			if (*needle == '\0')
 				return (hayHold);
-			else
-				hayHold++;
+			hayHold++;
 		}
 		return (0);
 }
