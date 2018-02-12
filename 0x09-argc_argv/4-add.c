@@ -1,12 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * digit_check - check that the input are numbers
- * @argc: size of argv
- * @argv: array of size argc
+ * @s: string
  * Return: 0 for success, 1 otherwise
  */
 
