@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * *_strlen - find string length
+ * _strlen - find string length
  * @str: string
  *
  * Return: length
@@ -29,17 +29,15 @@ char *_strdup(char *str)
 {
 	char *dup_str;
 	int i;
-        int len = _strlen(str);
+	int len = _strlen(str);
 
 	dup_str = malloc(sizeof(char) * len);
 
 	if (str == NULL)
 		return (NULL);
-	else
-	{
-		for (i = 0; str[i] != '\0'; i++)
-			dup_str[i] = str[i];
-		return (dup_str);
-		free(dup_str);
-	}
+
+	for (i = 0; str[i] != '\0'; i++)
+		dup_str[i] = str[i];
+	return (dup_str);
+	free(dup_str);
 }

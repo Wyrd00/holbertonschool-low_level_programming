@@ -3,19 +3,18 @@
 #include <stdlib.h>
 
 /**
- * *_strlen - find string length
+ * _strlen - find string length
  * @str: string
- *
  * Return: length
  */
 
 int _strlen(char *str)
 {
-        int len = 0;
+	int len = 0;
 
-        while (*(str + len))
-                len++;
-        return (len);
+	while (*(str + len))
+		len++;
+	return (len);
 }
 
 /**
