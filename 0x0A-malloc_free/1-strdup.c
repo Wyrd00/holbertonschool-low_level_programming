@@ -40,5 +40,4 @@ char *_strdup(char *str)
 		dup_str[i] = str[i];
 	dup_str[i] += '\0';
 	return (dup_str);
-	free(dup_str);
 }
