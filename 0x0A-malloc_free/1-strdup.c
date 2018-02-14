@@ -38,7 +38,7 @@ char *_strdup(char *str)
 
 	if (!dup_str)
 		return (NULL);
-	for (i = 0; i <= len; i++)
+	for (i = 0; i < len; i++)
 		dup_str[i] = str[i]; /*Will copy null terminator as well*/
 	return (dup_str);
 }
