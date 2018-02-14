@@ -38,7 +38,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	if (s3 == NULL)
 		return (NULL);
-	if (s1 + s2 == 0)
+	if (*s1 + *s2 == 0)
 	{
 		s3 = 0;
 		return (s3);
