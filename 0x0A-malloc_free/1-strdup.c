@@ -29,16 +29,17 @@ char *_strdup(char *str)
 {
 	char *dup_str;
 	int i;
-	int len = _strlen(str);
 
 	if (str == NULL)
 		return (NULL);
 
+	int len = _strlen(str);
+
 	dup_str = malloc(sizeof(char) * len + 1);
 
-	if (!dup_str)
+	if (dup_str == NULL)
 		return (NULL);
-	for (i = 0; i < len; i++)
-		dup_str[i] = str[i]; /*Will copy null terminator as well*/
+	for (i = 0; i <= len; i++)
+		dup_str[i] = str[i];
 	return (dup_str);
 }
