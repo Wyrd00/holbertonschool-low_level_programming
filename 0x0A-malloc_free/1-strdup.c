@@ -27,7 +27,7 @@ int _strlen(char *str)
 
 char *_strdup(char *str)
 {
-	char *dup_str;
+	char *dup_str = "";
 	int i;
 	int len = _strlen(str);
 
@@ -35,11 +35,12 @@ char *_strdup(char *str)
 		return (NULL);
 
 	dup_str = malloc(sizeof(char) * len + 1);
-
+	printf("%d\n", len);
 	if (dup_str == NULL)
+	{
 		return (NULL);
-	for (i = 0; i < len; i++)
-		dup_str[i] = str[i];
-	dup_str[i] = '\0';
+	}
+	for (i = 0; i <= len; i++)
+		dup_str[i] = str[i]; /*Will copy null terminator as well*/
 	return (dup_str);
 }
