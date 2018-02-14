@@ -35,7 +35,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	dup_str = malloc(sizeof(char) * len + 1);
-	printf("%d\n", len);
+
 	if (dup_str == NULL)
 	{
 		return (NULL);
