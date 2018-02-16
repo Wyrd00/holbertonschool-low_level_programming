@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * string_noncat - concot two strings
+ * string_nconcat - concot two strings
  * @s1: first string
  * @s2: second string
  * @n: bytes of s2
@@ -14,7 +14,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int new_n = n;
 	int len1, len2;
 	char *s3;
-	int i;
+	int i = 0;
 	int j = 0;
 
 	if (s1 == NULL)
