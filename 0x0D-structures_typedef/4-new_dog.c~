@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include "dog.h"
+
+int _strlen(char *s)
+{
+	int i;
+	for(i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
+}
+
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	dog_t *ptr;
+	int l_name = _strlen(name);
+	int l_owner = _strlen(owner);
+}
