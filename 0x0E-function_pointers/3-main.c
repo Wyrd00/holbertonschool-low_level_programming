@@ -17,14 +17,14 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		return (98);
 	}
 	fun = get_op_func(argv[2]);
 
 	if (fun == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
-		exit (99);
+		return (99);
 	}
 
 	num1 = atoi(argv[1]);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	if ((fun == op_div || fun == op_mod) && num2 == 0)
 	{
 		printf("Error\n");
-		exit (100);
+		return (100);
 	}
 	result = fun(num1, num2);
 
