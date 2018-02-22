@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * get_op_func - get operation
+ *
+ * @s: operator
+ * Return: appropriate funct
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -17,8 +24,8 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (*s == *(ops[i].op))
-			return (*(ops[i].f));
+		if (*s == *(ops[i].op) && s[1] == '\0')
+			return (ops[i].f);
 		i++;
 	}
 	return (NULL);
