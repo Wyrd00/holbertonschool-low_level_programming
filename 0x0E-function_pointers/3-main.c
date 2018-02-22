@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	}
 	fun = get_op_func(argv[2]);
 
-	if (fun == 0)
+	if (fun == 0 && argv[0][1] != '\0')
 	{
 		printf("Error\n");
 		return (99);
