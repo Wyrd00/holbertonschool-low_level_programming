@@ -2,7 +2,13 @@
 #include "function_pointers.h"
 #include <stdlib.h>
 #include "3-calc.h"
-
+/**
+ * main - put it all together
+ *
+ * @argc: argc
+ * @argv: argv
+ * Return: 0 if fail, num otherwise
+ */
 int main(int argc, char *argv[])
 {
 	int result, num1, num2;
