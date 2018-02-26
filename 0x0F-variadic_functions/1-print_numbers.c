@@ -3,9 +3,8 @@
 /**
  * print_numbers - returns the sum of parameters
  * @separator: string between num
- * @num: num of int arg pass to func
+ * @n: num
  */
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
@@ -14,7 +13,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(arg, n);
 
 	if (separator == NULL)
-		return;
+		separator = "";
 	for (i = 0; i < n; i++)
 	{
 		printf("%d", va_arg(arg, int));
