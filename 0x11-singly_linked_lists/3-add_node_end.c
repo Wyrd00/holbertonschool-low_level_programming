@@ -9,12 +9,12 @@
 
 int _strlen(const char *s)
 {
-        int len = 0;
+	int len = 0;
 
-        while (*(s + len))
-                len++;
+	while (*(s + len))
+		len++;
 
-        return (len);
+	return (len);
 }
 
 /**
@@ -33,14 +33,13 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 
 	new_node = malloc(sizeof(list_t));
+	new_node->str = strdup(str);
+	new_node->len = _strlen(str);
+	new_node->next = NULL;
 
-        new_node->str = strdup(str);
-        new_node->len = _strlen(str);
-        new_node->next = NULL;
-
-        if (*head == NULL)
+	if (*head == NULL)
 	{
-                *head = new_node;
+		*head = new_node;
 		return (new_node);
 	}
 	vagabond_node = *head;

@@ -8,15 +8,15 @@
 
 size_t list_len(const list_t *h)
 {
-        size_t num_of_elem = 0;
-        const list_t *ptr;
-        ptr = h;
+	size_t num_of_elem = 0;
+	const list_t *ptr;
 
-        while (ptr != NULL)
-        {
-                ptr = ptr->next;
-                num_of_elem++;
-        }
+	ptr = h;
+	while (ptr != NULL)
+	{
+		ptr = ptr->next;
+		num_of_elem++;
+	}
 
-        return (num_of_elem);
+	return (num_of_elem);
 }
