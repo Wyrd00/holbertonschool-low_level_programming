@@ -3,7 +3,7 @@
 
 /**
  * _strlen - get string length
- * @
+ * @s: string
  * Return: len
  */
 
@@ -19,8 +19,8 @@ int _strlen(const char *s)
 
 /**
  * add_node - add new node at beginning of list
- * @head: - pointer to pointer to head
- & @str: string to be duplicated to new node
+ * @head: pointer to pointer to head
+ * @str: string to be duplicated to new node
  * Return: address of new node, NULL if failed
  */
 
