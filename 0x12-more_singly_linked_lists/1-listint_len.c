@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * listint_len - find number of elements in linked list
+ * @h: pointer to list
+ * Return: number of elem
+ */
+
 size_t listint_len(const listint_t *h)
 {
 	int num_elem = 0;
