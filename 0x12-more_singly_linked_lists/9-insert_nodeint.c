@@ -24,14 +24,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->n = n;
 
 	vagabond = *head;
-	/*if my list is empty, but my idx got shiet*/
-	if (vagabond == NULL)
-	{
-		*head = new_node;
-		new_node->next = NULL;
-		return (new_node);
-	}
-	/*list not empty and node need to be in beginning*/
 	if (idx == 0)
 	{
 		new_node->next = *head;
