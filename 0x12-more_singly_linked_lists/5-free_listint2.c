@@ -13,8 +13,7 @@ void free_listint2(listint_t **head)
 	if (head == NULL || *head == NULL)
 		return;
 
-	vagabond = *head;
-	while (vagabond != NULL)
+	while (*head != NULL)
 	{
 		vagabond = (*head)->next;
 		free(*head);
