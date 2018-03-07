@@ -9,17 +9,16 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *vagabond;
-	listint_t *vagahead;
 
 	if (head == NULL || *head == NULL)
 		return;
 
-	vagahead = *head;
-	while (vagahead != NULL)
+	vagabond = *head;
+	while (vagabond != NULL)
 	{
-		vagabond = vagahead->next;
-		free(vagahead);
-		vagahead = vagabond;
+		vagabond = (*head)->next;
+		free(*head;
+		*head = vagabond;
 	}
 	*head = NULL;
 }
