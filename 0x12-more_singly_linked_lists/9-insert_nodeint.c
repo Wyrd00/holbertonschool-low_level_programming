@@ -25,7 +25,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	vagabond = *head;
 	/*if my list is empty, but my idx got shiet*/
-	if (vagabond == NULL && idx > 0)
+	if (vagabond == NULL)
 	{
 		*head = new_node;
 		new_node->next = NULL;
@@ -34,13 +34,19 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/*list not empty and node need to be in beginning*/
 	if (idx == 0)
 	{
-		vagabond = vagabond->next;
-		current_i++;
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
 	}
 	while (current_i != (idx - 1))
 	{
 		vagabond = vagabond->next;
 		current_i++;
+		if (vagabond == NULL)
+		{
+			free(new_node);
+			return (NULL);
+		}
 	}
 	new_node->next = vagabond->next;
 	vagabond->next = new_node;
