@@ -20,7 +20,7 @@ int main(int ac, char **av)
 	fd = open(f_from, O_RDONLY);
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", f_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f_from);
 		exit(98);
 	}
 	fd2 = open(f_to, O_TRUNC | O_CREAT | O_WRONLY, 0664);
@@ -43,7 +43,7 @@ int main(int ac, char **av)
 			exit(99);
 		}
 	} while (b_read == 1024);
-	if (close(fd) == -1)
+	if (close(fd) == -1)/*this closes it*/
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
