@@ -9,31 +9,31 @@
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-        dlistint_t *new, *vagabond;
+	dlistint_t *new, *vagabond;
 
-        if (head == NULL)
-                return (NULL);
+	if (head == NULL)
+		return (NULL);
 
-        new = malloc(sizeof(dlistint_t));
-        if (new == NULL)
-                return (NULL);
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
 
-        new->n = n;
-        new->next = NULL;
+	new->n = n;
+	new->next = NULL;
 
-        vagabond = *head;
-        if (*head == NULL)
-        {
-                new->prev = NULL;
-                *head = new;
-                return (new);
-        }
+	vagabond = *head;
+	if (*head == NULL)
+	{
+		new->prev = NULL;
+		*head = new;
+		return (new);
+	}
 
-        while (vagabond->next != NULL)
-        {
-            vagabond = vagabond->next;    
-        }
-        vagabond->next = new;
-        new->prev = vagabond;
-        return (new);
+	while (vagabond->next != NULL)
+	{
+		vagabond = vagabond->next;
+	}
+	vagabond->next = new;
+	new->prev = vagabond;
+	return (new);
 }
