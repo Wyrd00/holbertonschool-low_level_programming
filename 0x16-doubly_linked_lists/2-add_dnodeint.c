@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_nodeint - add new node beginning of doubly linked list
+ * add_dnodeint - add new node beginning of doubly linked list
  * @head: pointer to head of list
  * @n: value of node
  * Return: address of new node or else NULL
