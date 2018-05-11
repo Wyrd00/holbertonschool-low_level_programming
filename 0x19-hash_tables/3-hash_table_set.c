@@ -47,7 +47,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *vagabond;
 	hash_node_t *new;
 
-	if (!ht || !key || !value || !ht->array)
+	if (!ht || !key || !value || !ht->array || ht->size == 0 ||
+	    strlen(key) == 0)
 	{
 		return (0);
 	}
@@ -56,7 +57,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	vagabond = ht->array[index];
 
 	/*check to see if key already exist*/
-	while (vagabond)
+	while (vagabond != NULL)
 	{
 		if (strcmp(vagabond->key, key) == 0)
 		{
