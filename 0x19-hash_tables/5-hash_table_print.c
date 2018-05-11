@@ -16,7 +16,6 @@ void hash_table_print(const hash_table_t *ht)
 		return;
 
 	i = 0;
-	vagabond = ht->array[i];
 	hiya = 0;
 
 	printf("{");
