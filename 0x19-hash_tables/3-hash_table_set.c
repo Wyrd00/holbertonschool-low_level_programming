@@ -59,7 +59,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(vagabond->key, key) == 0)
 		{
-			free(->value);
+			free(vagabond->value);
 			vagabond->value = strdup(value);
 			return (1);
 		}
