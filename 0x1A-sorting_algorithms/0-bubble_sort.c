@@ -26,26 +26,13 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[i] > array[i + 1])
 			{
-				swap(&array[i], &array[i + 1]);
+				swapper = array[i];
+				array[i] = array[i + 1];
+				array[i + 1] = swapper
 				print_array(array, size);
 				n = array_iteration - 1;
 			}
 		}
 		array_iteration = n;
 	}
-}
-
-/**
- * swap - swap two array elements
- * @array1: first array
- * @array2: second array
- */
-
-void swap(int *array1, int *array2)
-{
-	int temp;
-
-	temp = *array1;
-	*array1 = *array2;
-	*array2 = temp;
 }

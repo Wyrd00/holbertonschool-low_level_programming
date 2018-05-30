@@ -1,80 +1,73 @@
 #include "sort.h"
-
 /**
- * partition - seperate num higher or lower than pivot
- * @array: array of int
- * @low: starting index
- * @high: last index
- * @size: size of array
- * Return: position of pivot
+ * swap - swap two values
+ * @a: first value to swap
+ * @b: second value to swap
+ * @size: size of the array
+ * @array: array to sort
  */
-
-int partition(int *array, ssize_t low, ssize_t high, size_t size)
+void swap(int *a, int *b, size_t size, int *array)
 {
-	int pivot;
-	int i, j;
+	int tmp;
 
-	pivot = array[high];
-	i = low - 1;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+	print_array(array, size);
+}
+/**
+ * partition - sorts values to either side of pivot
+ * @hi: higher bound of sub-array
+ * @lo: lower bound of sub-array
+ * @size: size of the array
+ * @array: array to sort
+ * Return: index of partition
+ */
+int partition(int *array, int lo, int hi, size_t size)
+{
+	int i;
+	int pindex = lo;
+	int pivot = array[hi];
 
-	for (j = low; j <= high - 1; j++)
+	for (i = lo; i < hi; i++)
 	{
-		if (array[j] <= pivot)
+		if (array[i] <= pivot)
 		{
-			i++;
-			swap(&array[i], &array[j]);
-			print_array(array, size);
+			if (pindex != i)
+				swap(&array[pindex], &array[i], size, array);
+			pindex += 1;
 		}
 	}
-	swap(&array[i + 1], &array[high]);
-	return (i + 1);
+	if (hi != pindex)
+		swap(&array[hi], &array[pindex], size, array);
+	return (pindex);
 }
-
 /**
- * quickSort - call partition on array
- * @array: array of int
- * @low: start of subarray
- * @high: end of subarray
- * @size: size of array
+ * quicksort - quicksort function
+ * @array: array to sort
+ * @lo: lower bound of sub-array
+ * @hi: higher bound of sub-array
+ * @size: size of the array
  */
-
-void quickSort(int *array, ssize_t low, ssize_t high, size_t size)
+void quicksort(int *array, int lo, int hi, size_t size)
 {
-	int pivot;
+	int pindex;
 
-	if (low < high)
+	if (lo < hi)
 	{
-		pivot = partition(array, low, high, size);
-		quickSort(array, low, pivot - 1, size);
-		quickSort(array, pivot + 1, high, size);
+		pindex = partition(array, lo, hi, size);
+		quicksort(array, lo, pindex - 1, size);
+		quicksort(array, pindex + 1, hi, size);
 	}
 }
-
 /**
- * quick_sort - swap array via quick method
- * @array: array of int
- * @size: size of array
+ * quick_sort - quick sort entry point
+ * @array: array to be sorted
+ * @size: size of the array
  */
-
 void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
-
-	quickSort(array, 0, size - 1, size);
-}
-
-/**
- * swap - swap two array elements
- * @array1: first array
- * @array2: second array
- */
-
-void swap(int *array1, int *array2)
-{
-	int temp;
-
-	temp = *array1;
-	*array1 = *array2;
-	*array2 = temp;
+	quicksort(array, 0, size - 1, size);
 }
