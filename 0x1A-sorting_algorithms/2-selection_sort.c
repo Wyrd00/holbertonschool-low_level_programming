@@ -8,8 +8,8 @@
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j;
-	size_t min;
+	unsigned int i, j;
+	unsigned int  min;
 	int swapper;
 
 	if (array == NULL || size < 2)
