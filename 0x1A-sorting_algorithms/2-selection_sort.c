@@ -2,8 +2,8 @@
 
 /**
  * selection_sort - sort via finding minimum in array of integers
- * @array:
- * @size:
+ * @array: array of int
+ * @size: size of array
  */
 
 void selection_sort(int *array, size_t size)
@@ -11,7 +11,7 @@ void selection_sort(int *array, size_t size)
 	size_t i, j;
 	size_t min;
 
-	if (array == NULL)
+	if (array == NULL || size < 2)
 		return;
 
 	for (i = 0; i < size - 1; i++)
@@ -41,6 +41,7 @@ void selection_sort(int *array, size_t size)
 void swap(int *array1, int *array2)
 {
 	int temp;
+
 	temp = *array1;
 	*array1 = *array2;
 	*array2 = temp;

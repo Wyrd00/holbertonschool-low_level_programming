@@ -5,9 +5,11 @@
  * @array: array of int
  * @low: starting index
  * @high: last index
+ * @size: size of array
+ * Return: position of pivot
  */
 
-int partition (int *array, ssize_t low, ssize_t high, size_t size)
+int partition(int *array, ssize_t low, ssize_t high, size_t size)
 {
 	int pivot;
 	ssize_t i, j;
@@ -71,6 +73,7 @@ void quick_sort(int *array, size_t size)
 void swap(int *array1, int *array2)
 {
 	int temp;
+
 	temp = *array1;
 	*array1 = *array2;
 	*array2 = temp;
