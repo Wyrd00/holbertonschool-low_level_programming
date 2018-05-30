@@ -12,7 +12,7 @@
 int partition(int *array, ssize_t low, ssize_t high, size_t size)
 {
 	int pivot;
-	ssize_t i, j;
+	int i, j;
 
 	pivot = array[high];
 	i = low - 1;
@@ -31,7 +31,7 @@ int partition(int *array, ssize_t low, ssize_t high, size_t size)
 }
 
 /**
- * quickSort - call parition on array
+ * quickSort - call partition on array
  * @array: array of int
  * @low: start of subarray
  * @high: end of subarray
