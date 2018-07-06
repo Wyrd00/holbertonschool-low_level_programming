@@ -21,7 +21,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 	if (!godfada)
 		return (NULL);
 
-	if (godfada->left->left == node || godfada->left->right == node)
+	if (godfada->left == papa)
 		return (godfada->right);
 	else
 		return (godfada->left);
