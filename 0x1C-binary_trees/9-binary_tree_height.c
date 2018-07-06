@@ -10,10 +10,10 @@
 size_t height_recursive(const binary_tree_t *tree, size_t counter)
 {
 	size_t counter_left, counter_right;
-	
+
 	counter_left = 0;
 	counter_right = 0;
-	
+
 	if (tree)
 	{
 		counter++;
@@ -36,8 +36,8 @@ size_t height_recursive(const binary_tree_t *tree, size_t counter)
 size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t counter;
-	counter = -1;
 
+	counter = -1;
 	if (!tree)
 		return (0);
 
