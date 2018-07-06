@@ -30,7 +30,7 @@ int check_full(const binary_tree_t *tree)
  * binary_tree_is_full - is tree full
  * @tree: pointer to tree
  * Return: 1 if full, otherwise 0
- */ 
+ */
 
 int binary_tree_is_full(const binary_tree_t *tree)
 {

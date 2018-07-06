@@ -10,10 +10,10 @@
 int find_height(const binary_tree_t *tree, size_t counter)
 {
 	int counter_left, counter_right;
-	
+
 	counter_left = 0;
 	counter_right = 0;
-	
+
 	if (tree)
 	{
 		counter++;
@@ -31,7 +31,7 @@ int find_height(const binary_tree_t *tree, size_t counter)
  * binary_tree_balance - measures balance factor of tree
  * @tree: pointer to tree
  * Return: balance factor
- */ 
+ */
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
