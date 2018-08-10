@@ -38,8 +38,8 @@ int interpolation_search(int *array, size_t size, int value)
 
 	while (array[hi] != array[lo])
 	{
-		mid = (lo + (value - array[lo]) * (hi - lo) /
-		       (array[hi] - array[lo]));
+		mid = lo + (((double)(hi - lo) / (array[hi] - array[lo])) *
+			    (value - array[lo]));
 
 		print_arr(array, mid, lo, hi);
 		if (value < array[lo] || value > array[hi])
